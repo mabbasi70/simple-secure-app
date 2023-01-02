@@ -18,7 +18,7 @@ public class JpaUserDetailsService implements UserDetailsService {
     UserRepository repository;
 
     @Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+    public CustomUserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         Supplier<UsernameNotFoundException> supplier =
                 () -> new UsernameNotFoundException("Something wrong with authentication!!!");
 
